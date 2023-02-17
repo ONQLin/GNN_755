@@ -5,16 +5,82 @@
 // estimate registers: mid or last layer [l20, l21, l22, l23] or [out0, out1] can be more efficient
 // hand-shaking signals: synchronous with registers
 
-module dnn_top(
+module dnn_top#(
+    parameter reg_pos = 0;
+)
+(
     input signed[4:0] x0, x1, x2, x3, w04, w05, w06, w07, w14, w15, w16, w17, w24, w25, w26, w27, w34,          // weights and inputs
     w35, w36, w37, w48, w58, w49, w59, w68, w69, w78, w79,
     input in_ready,
     input clk,
 
-    output[16:0] out0, out1,
-    output out0_ready, out1_ready
+    output logic[16:0] out0, out1,
+    output logic out0_ready, out1_ready
 );
 
+    wire signed[4:0] x[0:3] = '{x0, x1, x2, x3};                                        // inputs set as array for efficient coding
+    wire signed[4:0] w1[0:3][0:3] = '{'{w04, w05, w06, w07},'{w14, w15, w16, w17},
+    '{w24, w25, w26, w27},'{w34, w35, w36, w37}};                                       //the weights of layer1 w1[0][1]-->w05  w1[2][3]-->w27  (+4 for the 2nd index)
+    wire signed[8:0] p1[0:3][0:3];                                                              // similar +4 for 2nd index p[0][1]-->p05
 
+    generate           //get products of layer1
+        for(int i = 0; i < 4; i=i+1) begin
+            for(int j = 0; j < 4; j=j+1) begin
+                assign p1[i][j] = x[i] * w[i][j];
+            end
+        end
+    endgenerate
+
+    logic signed[10:0] s1[0:3]                                                            // results of 4 5 6 7 (index + 4)
+    generate            // get sums of layer1
+        for(int i = 0; i < 4; i=i+1) begin
+            assign s1[i] = p1[0][i] + p1[1][i] + p1[2][i] + p1[3][i];
+        end
+    endgenerate
+
+    logic signed[10:0] s_o1[0:3];    
+    generate            // Relu
+        for (int i = 0; i < 4; i = ) begin
+            Relu(s1[i], s_o1[i]);
+        end
+    endgenerate
+
+    wire signed[4:0] w2[0:3][0:1] = '{'{w48, w49},'{w58, w59},
+    '{w68, w69},'{w78, w79}};                                                           //the weights of layer2 w2[0][1]-->w49  w2[2][0]-->w68  (+4 for the 1st index and +8 for the 2nd index)
+    wire signed[13:0] p2[0:3][0:1];
+
+    generate           //get products of layer1
+        for(int i = 0; i < 4; i=i+1) begin
+            for(int j = 0; j < 2; j=j+1) begin
+                assign p2[i][j] = s_o1[i] * w2[i][j];
+            end
+        end
+    endgenerate
+
+    wire signed[16:0] s2[0:1];  
+
+    generate            // get sums of layer1
+        for(int i = 0; i < 4; i=i+1) begin
+            assign s2[i] = p2[0][i] + p2[1][i] + p2[2][i] + p2[3][i];
+        end
+    endgenerate
+
+    always_ff @(posedge clk) begin
+        if(in_ready) begin
+            out0 <= s2[0];
+            out1 <= s2[1];
+            out0_ready <= 1;
+            out1_ready <= 1;
+        end else begin
+            out0 <= out0;
+            out1 <= out1;
+            out0_ready <= 0;
+            out1_ready <= 0;
+        end
+    end
+
+    function void Relu(input signed[10:0] sum_in, output wire[10:0] sum_out);
+        assign sum_out = (sum_in[10]) ? 10'd0 : {1'b0, sum_in[9:0]};
+    endfunction
     
 endmodule
