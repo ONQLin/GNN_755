@@ -6,7 +6,7 @@
 // hand-shaking signals: synchronous with registers
 
 module dnn_top#(
-    parameter reg_pos = 0;
+    parameter reg_pos = 0
 )
 (
     input signed[4:0] x0, x1, x2, x3, w04, w05, w06, w07, w14, w15, w16, w17, w24, w25, w26, w27, w34,          // weights and inputs
@@ -18,30 +18,31 @@ module dnn_top#(
     output logic out0_ready, out1_ready
 );
 
+    genvar i,j;
     wire signed[4:0] x[0:3] = '{x0, x1, x2, x3};                                        // inputs set as array for efficient coding
     wire signed[4:0] w1[0:3][0:3] = '{'{w04, w05, w06, w07},'{w14, w15, w16, w17},
     '{w24, w25, w26, w27},'{w34, w35, w36, w37}};                                       //the weights of layer1 w1[0][1]-->w05  w1[2][3]-->w27  (+4 for the 2nd index)
     wire signed[8:0] p1[0:3][0:3];                                                              // similar +4 for 2nd index p[0][1]-->p05
 
     generate           //get products of layer1
-        for(int i = 0; i < 4; i=i+1) begin
-            for(int j = 0; j < 4; j=j+1) begin
-                assign p1[i][j] = x[i] * w[i][j];
+        for(i = 0; i < 4; i=i+1) begin
+            for(j = 0; j < 4; j=j+1) begin
+                assign p1[i][j] = x[i] * w1[i][j];
             end
         end
     endgenerate
 
-    logic signed[10:0] s1[0:3]                                                            // results of 4 5 6 7 (index + 4)
+    logic signed[10:0] s1[0:3];                                                            // results of 4 5 6 7 (index + 4)
     generate            // get sums of layer1
-        for(int i = 0; i < 4; i=i+1) begin
+        for(i = 0; i < 4; i=i+1) begin
             assign s1[i] = p1[0][i] + p1[1][i] + p1[2][i] + p1[3][i];
         end
     endgenerate
 
     logic signed[10:0] s_o1[0:3];    
     generate            // Relu
-        for (int i = 0; i < 4; i = ) begin
-            Relu(s1[i], s_o1[i]);
+        for (i = 0; i < 4; i=i+1) begin
+            assign s_o1[i] = Relu(s1[i]);
         end
     endgenerate
 
@@ -50,8 +51,8 @@ module dnn_top#(
     wire signed[13:0] p2[0:3][0:1];
 
     generate           //get products of layer1
-        for(int i = 0; i < 4; i=i+1) begin
-            for(int j = 0; j < 2; j=j+1) begin
+        for(i = 0; i < 4; i=i+1) begin
+            for(j = 0; j < 2; j=j+1) begin
                 assign p2[i][j] = s_o1[i] * w2[i][j];
             end
         end
@@ -60,7 +61,7 @@ module dnn_top#(
     wire signed[16:0] s2[0:1];  
 
     generate            // get sums of layer1
-        for(int i = 0; i < 4; i=i+1) begin
+        for(i = 0; i < 2; i=i+1) begin
             assign s2[i] = p2[0][i] + p2[1][i] + p2[2][i] + p2[3][i];
         end
     endgenerate
@@ -79,8 +80,8 @@ module dnn_top#(
         end
     end
 
-    function void Relu(input signed[10:0] sum_in, output wire[10:0] sum_out);
-        assign sum_out = (sum_in[10]) ? 10'd0 : {1'b0, sum_in[9:0]};
+    function signed[10:0] Relu(input signed[10:0] sum_in);
+        Relu = (sum_in[10]) ? 10'd0 : {1'b0, sum_in[9:0]};
     endfunction
     
 endmodule

@@ -4,13 +4,13 @@ logic signed[4:0] x0, x1, x2, x3, w04, w05, w06, w07, w14, w15, w16, w17, w24, w
     w35, w36, w37, w48, w58, w49, w59, w68, w69, w78, w79;
 
 reg clk, in_ready;
-logic signed[4:0] x[0:3] = {'{default:'0}};                                        // inputs set as array for efficient coding
+logic signed[4:0] x[0:3] = {5'd0,5'd0,5'd0,5'd0};                                        // inputs set as array for efficient coding
 logic signed[4:0] w1[0:3][0:3] = {'{default:'0},'{default:'0},'{default:'0},'{default:'0}};   
 logic signed[4:0] w2[0:3][0:1] = {'{default:'0},'{default:'0},'{default:'0},'{default:'0}};
 
 assign {x0, x1, x2, x3} = {x[0], x[1], x[2], x[3]};
 assign {w04, w05, w06, w07} = {w1[0][0], w1[0][1], w1[0][2], w1[0][3]};
-assign {w14, w25, w36, w47} = {w1[1][0], w1[1][1], w1[1][2], w1[1][3]};
+assign {w14, w15, w16, w17} = {w1[1][0], w1[1][1], w1[1][2], w1[1][3]};
 assign {w24, w25, w26, w27} = {w1[2][0], w1[2][1], w1[2][2], w1[2][3]};
 assign {w34, w35, w36, w37} = {w1[3][0], w1[3][1], w1[3][2], w1[3][3]};
 
@@ -79,6 +79,7 @@ initial begin
             @(posedge clk);
                   in_ready = 0;
       end
+      $stop;
 end
 
 always
