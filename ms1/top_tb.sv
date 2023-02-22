@@ -20,7 +20,7 @@ reg in_ready;
 // Look for 'test failed' in the message. If there is no such message then your output matches the golden outputs. 
 
 
-top top(.x0(x0), .x1(x1), .x2(x2), .x3(x3), 
+dnn_top top(.x0(x0), .x1(x1), .x2(x2), .x3(x3), 
         .w04(w04), .w14(w14), .w24(w24), .w34(w34), 
         .w05(w05), .w15(w15), .w25(w25), .w35(w35),
         .w06(w06), .w16(w16), .w26(w26), .w36(w36),
