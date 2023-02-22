@@ -12,85 +12,86 @@ module dnn_top
     input in_ready,
     input clk,
 
-    output logic[16:0] out0, out1,
+    output logic signed[16:0] out0, out1,
     output logic out0_ready, out1_ready
 );
 
     genvar i,j;
-    wire signed[4:0] x[0:3] = '{x0, x1, x2, x3};                                        // inputs set as array for efficient coding
+    wire signed[4:0] x_[0:3] = '{x0, x1, x2, x3};                                        // inputs set as array for efficient coding
     wire signed[4:0] w1[0:3][0:3] = '{'{w04, w05, w06, w07},'{w14, w15, w16, w17},
     '{w24, w25, w26, w27},'{w34, w35, w36, w37}};                                       //the weights of layer1 w1[0][1]-->w05  w1[2][3]-->w27  (+4 for the 2nd index)
-    wire signed[8:0] p1[0:3][0:3];                                                              // similar +4 for 2nd index p[0][1]-->p05
+
+    logic signed[8:0] p1[0:3][0:3];                                                              // similar +4 for 2nd index p[0][1]-->p05
+    logic signed[4:0] x[0:3];
+
+    generate;
+        for(i = 0; i < 4; i=i+1) begin
+            always_ff @(posedge clk) begin
+                if(in_ready)
+                    x[i] <= x_[i];
+            end 
+        end
+    endgenerate
 
     generate           //get products of layer1
         for(i = 0; i < 4; i=i+1) begin
             for(j = 0; j < 4; j=j+1) begin
-                assign p1[i][j] = x[i] * w1[i][j];
+                always_ff @(posedge clk) begin
+                    if(in_ready)
+                        p1[i][j] <= x[i] * w1[i][j];    
+                end    
             end
         end
     endgenerate
 
     logic signed[10:0] s1[0:3];                                                            // results of 4 5 6 7 (index + 4)
-
     generate            // get sums of layer1
         for(i = 0; i < 4; i=i+1) begin
             always_ff @(posedge clk) begin
-                if(in_ready)
-                    s1[i] <= p1[0][i] + p1[1][i] + p1[2][i] + p1[3][i];
+                s1[i] <= p1[0][i] + p1[1][i] + p1[2][i] + p1[3][i];
             end
         end
     endgenerate
-
-    logic in_rdy_1
-    always_ff @(posedge clk) begin
-        in_rdy_1 <= in_ready;
-    end
 
     logic signed[10:0] s_o1[0:3];    
     generate            // Relu
         for (i = 0; i < 4; i=i+1) begin
             always_ff @(posedge clk) begin
-                if(in_rdy_1)
-                    s_o1 <= (s1[i][10]) ? 10'd0 : {1'b0, si[i][9:0]};
+                s_o1[i] <= (s1[i][10]) ? 10'd0 : {1'b0, s1[i][9:0]};
             end
         end
     endgenerate
 
-
-
     wire signed[4:0] w2[0:3][0:1] = '{'{w48, w49},'{w58, w59},
     '{w68, w69},'{w78, w79}};                                                           //the weights of layer2 w2[0][1]-->w49  w2[2][0]-->w68  (+4 for the 1st index and +8 for the 2nd index)
-    wire signed[13:0] p2[0:3][0:1];
+    logic signed[13:0] p2[0:3][0:1];
 
     generate           //get products of layer1
         for(i = 0; i < 4; i=i+1) begin
             for(j = 0; j < 2; j=j+1) begin
-                assign p2[i][j] = s_o1[i] * w2[i][j];
+                always_ff @(posedge clk) begin
+                    p2[i][j] <= s_o1[i] * w2[i][j];
+                end
             end
         end
     endgenerate
 
-    logic in_rdy_2
-    always_ff @(posedge clk) begin
-        in_rdy_2 <= in_rdy_1;
-    end
-
-    wire signed[16:0] s2[0:1];  
+    logic signed[16:0] s2[0:1];  
 
     generate            // get sums of layer1
         for(i = 0; i < 2; i=i+1) begin
             always_ff @(posedge clk) begin
-                if(in_rdy_2)
-                    s2[i] <= p2[0][i] + p2[1][i] + p2[2][i] + p2[3][i];
+                s2[i] <= p2[0][i] + p2[1][i] + p2[2][i] + p2[3][i];
             end
         end
     endgenerate
 
+    logic[5:0] rdy_sft;
     always_ff @(posedge clk) begin
-        out0_ready <= in_rdy_2;
-        out1_ready <= in_rdy_2;
+        rdy_sft <= {rdy_sft[4:0],in_ready};
     end
 
-    assign {out0, out1} = {s2[0],s2[1]};    
+    assign {out0, out1} = {s2[0],s2[1]};  
+    assign {out0_ready, out1_ready} = {rdy_sft[5], rdy_sft[5]};  
     
 endmodule

@@ -19,6 +19,8 @@ assign {w58, w59} = {w2[1][0], w2[1][1]};
 assign {w68, w69} = {w2[2][0], w2[2][1]};
 assign {w78, w79} = {w2[3][0], w2[3][1]};
 
+wire signed[16:0] out0, out1;
+
 dnn_top u_dnn_top (
       .x0            (x0),
       .x1            (x1),
@@ -56,29 +58,61 @@ dnn_top u_dnn_top (
       .out1_ready    (out1_ready)
 );
 
+parameter FILE_PATH_F = "/filespace/j/jlin445/ece755/GNN_755/testbench/dnn_input.txt";            //select your own file path
+parameter FILE_PATH_O = "/filespace/j/jlin445/ece755/GNN_755/testbench/dnn_res.txt";
+integer fid;
+integer fid2;
+int count = 0;
+
 initial begin
       clk = 0;
       in_ready = 0;
       @(negedge clk);
-      repeat(20) begin
-            @(posedge clk);
-            in_ready = 1;
-            for(int i=0; i<4; i=i+1) begin
-                  x[i] = $urandom_range(0,5'h1f);
-            end
-            for(int i=0; i<4; i=i+1) begin
-                  for (int j = 0; j<4; j=j+1) begin
-                        w1[i][j] = $urandom_range(0,5'h1f); 
+      fid = $fopen(FILE_PATH_F, "w");
+      fid2 = $fopen(FILE_PATH_O, "w");
+
+      fork
+            repeat(20) begin
+                  @(posedge clk);
+                  in_ready = 1;
+                  $fdisplay(fid, "batch: %0d\n", count);
+                  $fdisplay(fid, "input x display \n");
+                  for(int i=0; i<4; i=i+1) begin
+                        x[i] = $urandom_range(0,5'h1f);
+                        $fdisplay(fid, "x%0d:   %0d\n", i, x[i]);
                   end
-            end
-            for(int i=0; i<4; i=i+1) begin
-                  for (int j = 0; j<2; j=j+1) begin
-                        w2[i][j] = $urandom_range(0,5'h1f); 
+                  @(posedge clk)
+                  $fdisplay(fid, "input w ly1 display \n");
+                  for(int i=0; i<4; i=i+1) begin
+                        for (int j = 0; j<4; j=j+1) begin
+                              w1[i][j] = $urandom_range(0,5'h1f);
+                              $fdisplay(fid, "w%0d%0d:   %0d\n", i, j+4, w1[i][j]); 
+                        end
                   end
-            end
-            @(posedge clk);
+                  repeat(3) @(posedge clk);
+                  $fdisplay(fid, "input w ly2 display \n");
+                  for(int i=0; i<4; i=i+1) begin
+                        for (int j = 0; j<2; j=j+1) begin
+                              w2[i][j] = $urandom_range(0,5'h1f); 
+                              $fdisplay(fid, "w%0d%0d:	%0d\n", i+4, j+8, w2[i][j]); 
+                        end
+                  end
                   in_ready = 0;
-      end
+                  count++;
+            end  
+
+            while(1) begin : check_output
+                  @(posedge out0_ready);
+                  $fdisplay(fid2, "batch %0d output:\n", count); 
+                  $fdisplay(fid2, "out0: %0d\n", out0); 
+                  $fdisplay(fid2, "out1: %0d\n", out1); 
+            end : check_output
+            
+      join_any
+
+      disable check_output;
+      $fclose(fid);
+      $fclose(fid2);
       $stop;
 end
 
