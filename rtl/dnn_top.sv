@@ -5,7 +5,7 @@
 // estimate registers: mid or last layer [l20, l21, l22, l23] or [out0, out1] can be more efficient
 // hand-shaking signals: synchronous with registers
 
-module dnn_top
+module top
 (
     input signed[4:0] x0, x1, x2, x3, w04, w05, w06, w07, w14, w15, w16, w17, w24, w25, w26, w27, w34,          // weights and inputs
     w35, w36, w37, w48, w58, w49, w59, w68, w69, w78, w79,
@@ -86,12 +86,22 @@ module dnn_top
         end
     endgenerate
 
-    logic[5:0] rdy_sft;
+    logic[4:0] rdy_sft;
     always_ff @(posedge clk) begin
-        rdy_sft <= {rdy_sft[4:0],in_ready};
+        rdy_sft <= {rdy_sft[3:0],in_ready};
     end
 
     assign {out0, out1} = {s2[0],s2[1]};  
-    assign {out0_ready, out1_ready} = {rdy_sft[5], rdy_sft[5]};  
+
+    always_ff @(posedge clk) begin
+        if(rdy_sft[4]) begin
+            out0_ready <= 1;
+            out1_ready <= 1;
+        end else if(rdy_sft[0]&~rdy_sft[1]) begin // in_ready would be low when out ready is set. So there must be 0->1 when new inputs come.
+            out0_ready <= 0;
+            out1_ready <= 0;
+        end
+    end  
+
     
 endmodule
