@@ -19,9 +19,9 @@ assign {w58, w59} = {w2[1][0], w2[1][1]};
 assign {w68, w69} = {w2[2][0], w2[2][1]};
 assign {w78, w79} = {w2[3][0], w2[3][1]};
 
-wire signed[16:0] out0, out1;
+wire signed[17:0] out0, out1;
 
-dnn_top u_dnn_top (
+dnn_top#(.i_w(5)) u_dnn_top (
       .x0            (x0),
       .x1            (x1),
       .x2            (x2),
@@ -58,8 +58,8 @@ dnn_top u_dnn_top (
       .out1_ready    (out1_ready)
 );
 
-parameter FILE_PATH_F = "/filespace/j/jlin445/ece755/GNN_755/testbench/dnn_input.txt";            //select your own file path
-parameter FILE_PATH_O = "/filespace/j/jlin445/ece755/GNN_755/testbench/dnn_res.txt";
+parameter FILE_PATH_F = "./dnn_input.txt";            //select your own file path
+parameter FILE_PATH_O = "./dnn_res.txt";
 integer fid;
 integer fid2;
 int count = 0;
