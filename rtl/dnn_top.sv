@@ -111,10 +111,10 @@ module dnn_top#(
             end
 
             always_ff @(posedge clk) begin
-                if(~rdy_sft[0]&rdy_sft[1]) begin
+                if(rdy_sft[4]) begin
                     out0_ready <= 1;
                     out1_ready <= 1;
-                end else if(rdy_sft[4]) begin // in_ready would be low when out ready is set. So there must be 0->1 when new inputs come.
+                end else if(rdy_sft[0]&~rdy_sft[1]) begin // in_ready would be low when out ready is set. So there must be 0->1 when new inputs come.
                     out0_ready <= 0;
                     out1_ready <= 0;
                 end
