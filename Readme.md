@@ -16,8 +16,9 @@ The computation of GNN may requrie further verification.
 
 
 ## Milestone 3: DC Syn
-Done, it is regular work according to the guide. I establish the impl of different performance configuration. You can check that in syn_output. They all pass the post-syn test by MS2. You can play with that and writing different constraints(clk) and check the synthesis report.
+Done, it is regular work according to the guide without coding with extra files. Please follow the Readme in ms3 if you want to play. I have established the impl of different performance configuration(3 stages and 6 stages in DNN). You can check that in syn_output, and I prefer the 3 stages one. They all pass the post-syn test by MS2. You can play with that and writing different constraints(clk) and check the synthesis report. Perhaps I will update 1 stage DNN to see the slower version's results.
 
+## Milestone 3: APR
 
 ### File Org:
 each Milestone's tb and other materials will store at its own folder. ./testbench folder store some DIY files.
