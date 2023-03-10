@@ -16,7 +16,7 @@ The computation of GNN may requrie further verification.
 
 
 ## Milestone 3: DC Syn
-
+Done, it is regular work according to the guide. I establish the impl of different performance configuration. You can check that in syn_output. They all pass the post-syn test by MS2. You can play with that and writing different constraints(clk) and check the synthesis report.
 
 
 ### File Org:
