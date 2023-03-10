@@ -1,0 +1,143 @@
+Loading db file '/cae/apps/data/synopsys-2022/syn/T-2022.03-SP3/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2022/syn/T-2022.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'asap7sc7p5t_AO_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_OA_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_INVBUF_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_SEQ_RVT_TT_nldm_220123'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine top line 78 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   out0_node0_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+|   out1_node0_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine top line 83 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   out0_node1_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+|   out1_node1_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine top line 88 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   out0_node2_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+|   out1_node2_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine top line 93 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   out0_node3_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+|   out1_node3_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine top line 101 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| out10_ready_node0_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| out11_ready_node0_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine top line 106 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| out10_ready_node1_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| out11_ready_node1_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine top line 111 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| out10_ready_node2_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| out11_ready_node2_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine top line 116 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| out10_ready_node3_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| out11_ready_node3_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully. (top)
+Elaborated 1 design.
+Current design is now 'top'.
+Information: Building the design 'dnn_top' instantiated from design 'top' with
+	the parameters "performance=1". (HDL-193)
+Warning:  /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/dnn_top.sv:73: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine dnn_top_performance1 line 49 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/dnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       p1_reg        | Flip-flop |  176  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dnn_top_performance1 line 72 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/dnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s_o1_reg       | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dnn_top_performance1 line 100 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/dnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       s2_reg        | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dnn_top_performance1 line 124 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/dnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| genblk7.rdy_sft_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dnn_top_performance1 line 128 in file
+		'/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/dnn_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   out0_ready_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   out1_ready_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dnn_top_performance1)
+1
