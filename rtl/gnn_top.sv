@@ -119,7 +119,7 @@ always_ff @(posedge clk) begin
 end
 
 // neighbour:1 2
-dnn_top #(.performance(2)) node0 (
+dnn_top #(.performance(0)) node0 (
       .x0            (x_in[0][0]),
       .x1            (x_in[0][1]),
       .x2            (x_in[0][2]),
@@ -157,7 +157,7 @@ dnn_top #(.performance(2)) node0 (
 );
 
 // neighbour:0 3
-dnn_top #(.performance(2)) node1 (
+dnn_top #(.performance(0)) node1 (
       .x0            (x_in[1][0]),
       .x1            (x_in[1][1]),
       .x2            (x_in[1][2]),
@@ -195,7 +195,7 @@ dnn_top #(.performance(2)) node1 (
 );
 
 // neighbour:0 3
-dnn_top #(.performance(2)) node2 (
+dnn_top #(.performance(0)) node2 (
       .x0            (x_in[2][0]),
       .x1            (x_in[2][1]),
       .x2            (x_in[2][2]),
@@ -233,7 +233,7 @@ dnn_top #(.performance(2)) node2 (
 );
 
 // neighbour:1 2
-dnn_top #(.performance(2)) node3 (
+dnn_top #(.performance(0)) node3 (
       .x0            (x_in[3][0]),
       .x1            (x_in[3][1]),
       .x2            (x_in[3][2]),

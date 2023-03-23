@@ -16,7 +16,8 @@ The computation of GNN may requrie further verification.
 
 
 ## Milestone 3: DC Syn
-
+There is now 3 configurations in DNN design: 1 stage; 3 stage; 6 stages
+These three config make difference in both performance (inference throughput = freq and Syn area, power...). I think it can help us better trade off the design and find ways to optimize. BTW, both three configs have passed the tb in MS2.
 
 
 ### File Org:

@@ -36,7 +36,7 @@ module dnn_top#(
                         x[i] <= x_[i];
                 end 
             end
-        end else if(performance == 1) begin
+        end else begin
             for(i = 0; i < 4; i=i+1) begin
                 assign x[i] = x_[i];
             end
@@ -46,9 +46,13 @@ module dnn_top#(
     generate           //get products of layer1
         for(i = 0; i < 4; i=i+1) begin
             for(j = 0; j < 4; j=j+1) begin
-                always_ff @(posedge clk) begin
-                    p1[i][j] <= x[i] * w1[i][j];    
-                end    
+                if(performance != 0) begin
+                    always_ff @(posedge clk) begin
+                        p1[i][j] <= x[i] * w1[i][j];    
+                    end    
+                end else begin
+                    assign p1[i][j] = x[i] * w1[i][j]; 
+                end
             end
         end
     endgenerate
@@ -60,7 +64,7 @@ module dnn_top#(
                 always_ff @(posedge clk) begin
                     s1[i] <= p1[0][i] + p1[1][i] + p1[2][i] + p1[3][i];
                 end
-            end else if(performance == 1) begin
+            end else begin
                 assign s1[i] = p1[0][i] + p1[1][i] + p1[2][i] + p1[3][i];
             end
         end
@@ -86,7 +90,7 @@ module dnn_top#(
                     always_ff @(posedge clk) begin
                         p2[i][j] <= s_o1[i] * w2[i][j];
                     end
-                end else if(performance == 1) begin
+                end else begin
                     assign p2[i][j] = s_o1[i] * w2[i][j];
                 end
             end
@@ -97,8 +101,12 @@ module dnn_top#(
 
     generate            // get sums of layer1
         for(i = 0; i < 2; i=i+1) begin
-            always_ff @(posedge clk) begin
-                s2[i] <= p2[0][i] + p2[1][i] + p2[2][i] + p2[3][i];
+            if(performance != 0) begin
+                always_ff @(posedge clk) begin
+                    s2[i] <= p2[0][i] + p2[1][i] + p2[2][i] + p2[3][i];
+                end
+            end else begin
+                assign s2[i] = p2[0][i] + p2[1][i] + p2[2][i] + p2[3][i];
             end
         end
     endgenerate
@@ -134,6 +142,25 @@ module dnn_top#(
                     out1_ready <= 0;
                 end
             end
+        end else begin
+            logic rdy_sft;
+            always_ff @(posedge clk) begin
+                if(in_ready) begin
+                    rdy_sft <= 1;
+                end else begin // in_ready would be low when out ready is set. So there must be 0->1 when new inputs come.
+                    rdy_sft <= 0;
+                end
+            end 
+
+            always_ff @(posedge clk) begin
+                if(rdy_sft) begin
+                    out0_ready <= 1;
+                    out1_ready <= 1;
+                end else if(in_ready) begin // in_ready would be low when out ready is set. So there must be 0->1 when new inputs come.
+                    out0_ready <= 0;
+                    out1_ready <= 0;
+                end
+            end 
         end
     endgenerate
     

@@ -1,0 +1,1620 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : top
+Version: T-2022.03-SP3
+Date   : Wed Mar 22 17:42:47 2023
+****************************************
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_AO_RVT_TT_nldm_211120
+Wire Load Model Mode: segmented
+
+  Startpoint: node3/s_o1_reg[1][1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out0_node3_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node3/s_o1_reg[1][1]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node3/s_o1_reg[1][1]/QN (DFFHQNx1_ASAP7_75t_R)         79.71      79.71 r
+  U13636/Y (INVx1_ASAP7_75t_R)                           32.36     112.07 f
+  U20100/Y (NOR4xp25_ASAP7_75t_R)                        52.91     164.98 r
+  node3/mult_94_G2/S3_2_3/SN (FAx1_ASAP7_75t_R)          57.85     222.83 f
+  U10841/Y (INVx1_ASAP7_75t_R)                           19.20     242.03 r
+  node3/mult_94_G2/S2_3_2/SN (FAx1_ASAP7_75t_R)          39.65     281.68 f
+  U10608/Y (INVx1_ASAP7_75t_R)                           18.64     300.33 r
+  node3/mult_94_G2/S2_4_1/SN (FAx1_ASAP7_75t_R)          39.47     339.80 f
+  U10607/Y (INVx1_ASAP7_75t_R)                           18.51     358.30 r
+  node3/mult_94_G2/S1_5_0/SN (FAx1_ASAP7_75t_R)          47.80     406.10 f
+  U16197/Y (NOR3xp33_ASAP7_75t_R)                        43.19     449.29 r
+  U17134/Y (O2A1O1Ixp33_ASAP7_75t_R)                     34.18     483.47 f
+  node3/add_2_root_add_109_3/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         32.13     515.60 r
+  U9901/Y (INVx1_ASAP7_75t_R)                            17.95     533.55 f
+  node3/add_2_root_add_109_3/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.15     555.70 r
+  U9892/Y (INVx1_ASAP7_75t_R)                            17.47     573.17 f
+  node3/add_2_root_add_109_3/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     595.16 r
+  U9883/Y (INVx1_ASAP7_75t_R)                            17.42     612.58 f
+  node3/add_2_root_add_109_3/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     634.56 r
+  U9874/Y (INVx1_ASAP7_75t_R)                            17.41     651.96 f
+  node3/add_2_root_add_109_3/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     673.94 r
+  U9865/Y (INVx1_ASAP7_75t_R)                            17.54     691.48 f
+  node3/add_2_root_add_109_3/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     713.50 r
+  U9856/Y (INVx1_ASAP7_75t_R)                            17.42     730.92 f
+  node3/add_2_root_add_109_3/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     752.90 r
+  U9847/Y (INVx1_ASAP7_75t_R)                            17.64     770.54 f
+  node3/add_2_root_add_109_3/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     792.58 r
+  U9838/Y (INVx1_ASAP7_75t_R)                            17.37     809.95 f
+  node3/add_2_root_add_109_3/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     831.91 r
+  U9829/Y (INVx1_ASAP7_75t_R)                            17.23     849.14 f
+  node3/add_2_root_add_109_3/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     871.05 r
+  U9820/Y (INVx1_ASAP7_75t_R)                            17.46     888.51 f
+  node3/add_2_root_add_109_3/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     910.50 r
+  U9811/Y (INVx1_ASAP7_75t_R)                            17.67     928.18 f
+  node3/add_2_root_add_109_3/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.06     950.24 r
+  U9802/Y (INVx1_ASAP7_75t_R)                            17.23     967.46 f
+  node3/add_2_root_add_109_3/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58    1004.04 r
+  U9801/Y (INVx1_ASAP7_75t_R)                            32.62    1036.66 f
+  node3/add_0_root_add_109_3/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1065.36 r
+  U9794/Y (INVx1_ASAP7_75t_R)                            17.41    1082.77 f
+  node3/add_0_root_add_109_3/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1104.75 r
+  U9787/Y (INVx1_ASAP7_75t_R)                            17.41    1122.16 f
+  node3/add_0_root_add_109_3/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1160.87 f
+  U9786/Y (INVx1_ASAP7_75t_R)                            57.90    1218.77 r
+  add_1_root_add_0_root_add_94_2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         59.93    1278.70 f
+  U9784/Y (INVx1_ASAP7_75t_R)                            22.88    1301.58 r
+  add_0_root_add_0_root_add_94_2/U1_19/CON (FAx1_ASAP7_75t_R)
+                                                         21.79    1323.37 f
+  U9783/Y (INVx1_ASAP7_75t_R)                            18.43    1341.80 r
+  add_0_root_add_0_root_add_94_2/U1_20/SN (FAx1_ASAP7_75t_R)
+                                                         36.12    1377.93 r
+  out0_node3_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1377.93 r
+  data arrival time                                               1377.93
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out0_node3_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -11.70    1388.29
+  data required time                                              1388.29
+  --------------------------------------------------------------------------
+  data required time                                              1388.29
+  data arrival time                                              -1377.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.36
+
+
+  Startpoint: node3/s_o1_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out1_node3_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node3/s_o1_reg[0][0]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node3/s_o1_reg[0][0]/QN (DFFHQNx1_ASAP7_75t_R)         71.14      71.14 f
+  U13647/Y (INVx1_ASAP7_75t_R)                           27.38      98.52 r
+  U881/Y (NAND2xp5_ASAP7_75t_R)                          21.77     120.29 f
+  U19929/Y (NOR3xp33_ASAP7_75t_R)                        38.01     158.30 r
+  node3/mult_94_G2_G1/S3_2_3/SN (FAx1_ASAP7_75t_R)       51.98     210.28 f
+  U11828/Y (INVx1_ASAP7_75t_R)                           18.51     228.78 r
+  node3/mult_94_G2_G1/S2_3_2/SN (FAx1_ASAP7_75t_R)       39.42     268.21 f
+  U11827/Y (INVx1_ASAP7_75t_R)                           18.51     286.71 r
+  node3/mult_94_G2_G1/S2_4_1/SN (FAx1_ASAP7_75t_R)       39.42     326.14 f
+  U11826/Y (INVx1_ASAP7_75t_R)                           18.51     344.64 r
+  node3/mult_94_G2_G1/S1_5_0/SN (FAx1_ASAP7_75t_R)       47.80     392.44 f
+  U16182/Y (NOR3xp33_ASAP7_75t_R)                        43.21     435.65 r
+  U17173/Y (O2A1O1Ixp33_ASAP7_75t_R)                     32.84     468.49 f
+  node3/add_2_root_add_109_3_G2/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         28.85     497.34 r
+  U11747/Y (INVx1_ASAP7_75t_R)                           17.83     515.17 f
+  node3/add_2_root_add_109_3_G2/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.11     537.29 r
+  U11738/Y (INVx1_ASAP7_75t_R)                           17.47     554.75 f
+  node3/add_2_root_add_109_3_G2/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     576.75 r
+  U11729/Y (INVx1_ASAP7_75t_R)                           17.42     594.16 f
+  node3/add_2_root_add_109_3_G2/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     616.14 r
+  U11720/Y (INVx1_ASAP7_75t_R)                           17.41     633.55 f
+  node3/add_2_root_add_109_3_G2/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     655.52 r
+  U11711/Y (INVx1_ASAP7_75t_R)                           17.54     673.06 f
+  node3/add_2_root_add_109_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     695.08 r
+  U11702/Y (INVx1_ASAP7_75t_R)                           17.42     712.50 f
+  node3/add_2_root_add_109_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     734.48 r
+  U11693/Y (INVx1_ASAP7_75t_R)                           17.64     752.12 f
+  node3/add_2_root_add_109_3_G2/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     774.17 r
+  U11684/Y (INVx1_ASAP7_75t_R)                           17.37     791.53 f
+  node3/add_2_root_add_109_3_G2/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     813.49 r
+  U11675/Y (INVx1_ASAP7_75t_R)                           17.23     830.72 f
+  node3/add_2_root_add_109_3_G2/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     852.64 r
+  U11666/Y (INVx1_ASAP7_75t_R)                           17.24     869.88 f
+  node3/add_2_root_add_109_3_G2/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.92     891.80 r
+  U11657/Y (INVx1_ASAP7_75t_R)                           18.16     909.96 f
+  node3/add_2_root_add_109_3_G2/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.23     932.18 r
+  U11648/Y (INVx1_ASAP7_75t_R)                           17.22     949.41 f
+  node3/add_2_root_add_109_3_G2/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58     985.98 r
+  U11647/Y (INVx1_ASAP7_75t_R)                           32.62    1018.61 f
+  node3/add_0_root_add_109_3_G2/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1047.30 r
+  U11640/Y (INVx1_ASAP7_75t_R)                           17.41    1064.72 f
+  node3/add_0_root_add_109_3_G2/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1086.69 r
+  U11633/Y (INVx1_ASAP7_75t_R)                           17.41    1104.10 f
+  node3/add_0_root_add_109_3_G2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1142.82 f
+  U11632/Y (INVx1_ASAP7_75t_R)                           57.90    1200.71 r
+  add_1_root_add_0_root_add_95_2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         59.93    1260.64 f
+  U11630/Y (INVx1_ASAP7_75t_R)                           22.88    1283.53 r
+  add_0_root_add_0_root_add_95_2/U1_19/CON (FAx1_ASAP7_75t_R)
+                                                         21.79    1305.32 f
+  U11629/Y (INVx1_ASAP7_75t_R)                           18.43    1323.75 r
+  add_0_root_add_0_root_add_95_2/U1_20/SN (FAx1_ASAP7_75t_R)
+                                                         36.12    1359.87 r
+  out1_node3_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1359.87 r
+  data arrival time                                               1359.87
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out1_node3_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -11.70    1388.29
+  data required time                                              1388.29
+  --------------------------------------------------------------------------
+  data required time                                              1388.29
+  data arrival time                                              -1359.87
+  --------------------------------------------------------------------------
+  slack (MET)                                                       28.41
+
+
+  Startpoint: node2/s_o1_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out1_node2_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node2/s_o1_reg[0][0]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node2/s_o1_reg[0][0]/QN (DFFHQNx1_ASAP7_75t_R)         70.09      70.09 f
+  U13600/Y (INVx1_ASAP7_75t_R)                           26.90      97.00 r
+  U2346/Y (NAND2xp5_ASAP7_75t_R)                         21.66     118.66 f
+  U19824/Y (NOR3xp33_ASAP7_75t_R)                        37.98     156.64 r
+  node2/mult_94_G2_G1/S3_2_3/SN (FAx1_ASAP7_75t_R)       52.48     209.11 f
+  U12004/Y (INVx1_ASAP7_75t_R)                           18.49     227.61 r
+  node2/mult_94_G2_G1/S2_3_2/SN (FAx1_ASAP7_75t_R)       39.42     267.02 f
+  U12003/Y (INVx1_ASAP7_75t_R)                           18.49     285.51 r
+  node2/mult_94_G2_G1/S2_4_1/SN (FAx1_ASAP7_75t_R)       39.42     324.93 f
+  U12002/Y (INVx1_ASAP7_75t_R)                           18.49     343.42 r
+  node2/mult_94_G2_G1/S1_5_0/SN (FAx1_ASAP7_75t_R)       47.79     391.22 f
+  U16173/Y (NOR3xp33_ASAP7_75t_R)                        43.17     434.39 r
+  U17139/Y (O2A1O1Ixp33_ASAP7_75t_R)                     32.84     467.23 f
+  node2/add_2_root_add_109_3_G2/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         28.85     496.08 r
+  U11927/Y (INVx1_ASAP7_75t_R)                           17.83     513.91 f
+  node2/add_2_root_add_109_3_G2/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.11     536.02 r
+  U11920/Y (INVx1_ASAP7_75t_R)                           17.47     553.49 f
+  node2/add_2_root_add_109_3_G2/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     575.48 r
+  U11913/Y (INVx1_ASAP7_75t_R)                           17.42     592.90 f
+  node2/add_2_root_add_109_3_G2/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     614.87 r
+  U11906/Y (INVx1_ASAP7_75t_R)                           17.41     632.28 f
+  node2/add_2_root_add_109_3_G2/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     654.26 r
+  U11899/Y (INVx1_ASAP7_75t_R)                           17.54     671.80 f
+  node2/add_2_root_add_109_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     693.82 r
+  U11892/Y (INVx1_ASAP7_75t_R)                           17.42     711.24 f
+  node2/add_2_root_add_109_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     733.21 r
+  U11885/Y (INVx1_ASAP7_75t_R)                           17.64     750.85 f
+  node2/add_2_root_add_109_3_G2/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     772.90 r
+  U11878/Y (INVx1_ASAP7_75t_R)                           17.38     790.28 f
+  node2/add_2_root_add_109_3_G2/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     812.24 r
+  U11871/Y (INVx1_ASAP7_75t_R)                           17.23     829.47 f
+  node2/add_2_root_add_109_3_G2/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     851.38 r
+  U11864/Y (INVx1_ASAP7_75t_R)                           17.56     868.95 f
+  node2/add_2_root_add_109_3_G2/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     890.97 r
+  U11857/Y (INVx1_ASAP7_75t_R)                           17.67     908.64 f
+  node2/add_2_root_add_109_3_G2/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.06     930.70 r
+  U11850/Y (INVx1_ASAP7_75t_R)                           17.22     947.93 f
+  node2/add_2_root_add_109_3_G2/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58     984.51 r
+  U11849/Y (INVx1_ASAP7_75t_R)                           32.62    1017.13 f
+  node2/add_0_root_add_109_3_G2/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1045.83 r
+  U11844/Y (INVx1_ASAP7_75t_R)                           17.41    1063.24 f
+  node2/add_0_root_add_109_3_G2/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1085.22 r
+  U11839/Y (INVx1_ASAP7_75t_R)                           17.41    1102.63 f
+  node2/add_0_root_add_109_3_G2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1141.34 f
+  U11838/Y (INVx1_ASAP7_75t_R)                           57.90    1199.24 r
+  add_1_root_add_0_root_add_90_2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         59.93    1259.17 f
+  U11837/Y (INVx1_ASAP7_75t_R)                           21.42    1280.59 r
+  add_0_root_add_0_root_add_90_2/U1_19/CON (FAx1_ASAP7_75t_R)
+                                                         21.43    1302.02 f
+  U11631/Y (INVx1_ASAP7_75t_R)                           19.67    1321.68 r
+  add_0_root_add_0_root_add_90_2/U1_20/SN (FAx1_ASAP7_75t_R)
+                                                         36.46    1358.14 r
+  out1_node2_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1358.14 r
+  data arrival time                                               1358.14
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out1_node2_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -12.25    1387.74
+  data required time                                              1387.74
+  --------------------------------------------------------------------------
+  data required time                                              1387.74
+  data arrival time                                              -1358.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                       29.60
+
+
+  Startpoint: node2/s_o1_reg[1][1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out0_node2_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node2/s_o1_reg[1][1]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node2/s_o1_reg[1][1]/QN (DFFHQNx1_ASAP7_75t_R)         78.85      78.85 r
+  U13589/Y (INVx1_ASAP7_75t_R)                           32.28     111.13 f
+  U19779/Y (NOR3xp33_ASAP7_75t_R)                        40.75     151.89 r
+  node2/mult_94_G2/S3_2_3/SN (FAx1_ASAP7_75t_R)          52.83     204.72 f
+  U10678/Y (INVx1_ASAP7_75t_R)                           18.61     223.33 r
+  node2/mult_94_G2/S2_3_2/SN (FAx1_ASAP7_75t_R)          39.46     262.79 f
+  U10677/Y (INVx1_ASAP7_75t_R)                           18.49     281.28 r
+  node2/mult_94_G2/S2_4_1/SN (FAx1_ASAP7_75t_R)          39.42     320.69 f
+  U10676/Y (INVx1_ASAP7_75t_R)                           18.49     339.18 r
+  node2/mult_94_G2/S1_5_0/SN (FAx1_ASAP7_75t_R)          47.79     386.98 f
+  U16163/Y (NOR3xp33_ASAP7_75t_R)                        43.17     430.15 r
+  U17160/Y (O2A1O1Ixp33_ASAP7_75t_R)                     34.18     464.33 f
+  node2/add_2_root_add_109_3/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         32.13     496.45 r
+  U10081/Y (INVx1_ASAP7_75t_R)                           17.95     514.40 f
+  node2/add_2_root_add_109_3/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.15     536.56 r
+  U10074/Y (INVx1_ASAP7_75t_R)                           17.47     554.03 f
+  node2/add_2_root_add_109_3/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     576.02 r
+  U10067/Y (INVx1_ASAP7_75t_R)                           17.42     593.44 f
+  node2/add_2_root_add_109_3/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     615.41 r
+  U10060/Y (INVx1_ASAP7_75t_R)                           17.41     632.82 f
+  node2/add_2_root_add_109_3/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     654.79 r
+  U10053/Y (INVx1_ASAP7_75t_R)                           17.54     672.33 f
+  node2/add_2_root_add_109_3/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     694.35 r
+  U10046/Y (INVx1_ASAP7_75t_R)                           17.42     711.77 f
+  node2/add_2_root_add_109_3/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     733.75 r
+  U10039/Y (INVx1_ASAP7_75t_R)                           17.64     751.39 f
+  node2/add_2_root_add_109_3/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     773.44 r
+  U10032/Y (INVx1_ASAP7_75t_R)                           17.37     790.80 f
+  node2/add_2_root_add_109_3/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     812.76 r
+  U10025/Y (INVx1_ASAP7_75t_R)                           17.23     829.99 f
+  node2/add_2_root_add_109_3/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     851.91 r
+  U10018/Y (INVx1_ASAP7_75t_R)                           17.46     869.37 f
+  node2/add_2_root_add_109_3/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     891.36 r
+  U10011/Y (INVx1_ASAP7_75t_R)                           17.18     908.53 f
+  node2/add_2_root_add_109_3/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         21.90     930.43 r
+  U10004/Y (INVx1_ASAP7_75t_R)                           17.22     947.65 f
+  node2/add_2_root_add_109_3/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58     984.23 r
+  U10003/Y (INVx1_ASAP7_75t_R)                           32.62    1016.85 f
+  node2/add_0_root_add_109_3/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1045.55 r
+  U9998/Y (INVx1_ASAP7_75t_R)                            17.41    1062.96 f
+  node2/add_0_root_add_109_3/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1084.94 r
+  U9993/Y (INVx1_ASAP7_75t_R)                            17.41    1102.35 f
+  node2/add_0_root_add_109_3/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1141.06 f
+  U9992/Y (INVx1_ASAP7_75t_R)                            57.90    1198.96 r
+  add_1_root_add_0_root_add_89_2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         59.93    1258.89 f
+  U9991/Y (INVx1_ASAP7_75t_R)                            21.42    1280.31 r
+  add_0_root_add_0_root_add_89_2/U1_19/CON (FAx1_ASAP7_75t_R)
+                                                         21.43    1301.74 f
+  U9785/Y (INVx1_ASAP7_75t_R)                            19.67    1321.41 r
+  add_0_root_add_0_root_add_89_2/U1_20/SN (FAx1_ASAP7_75t_R)
+                                                         36.46    1357.86 r
+  out0_node2_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1357.86 r
+  data arrival time                                               1357.86
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out0_node2_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -12.25    1387.74
+  data required time                                              1387.74
+  --------------------------------------------------------------------------
+  data required time                                              1387.74
+  data arrival time                                              -1357.86
+  --------------------------------------------------------------------------
+  slack (MET)                                                       29.87
+
+
+  Startpoint: node1/s_o1_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out0_node0_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node1/s_o1_reg[0][0]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node1/s_o1_reg[0][0]/QN (DFFHQNx1_ASAP7_75t_R)         71.14      71.14 f
+  U13552/Y (INVx1_ASAP7_75t_R)                           27.22      98.36 r
+  U3928/Y (NAND2xp5_ASAP7_75t_R)                         21.71     120.06 f
+  U20073/Y (NOR3xp33_ASAP7_75t_R)                        38.00     158.06 r
+  node1/mult_94/S3_2_3/SN (FAx1_ASAP7_75t_R)             52.52     210.58 f
+  U10319/Y (INVx1_ASAP7_75t_R)                           18.46     229.04 r
+  node1/mult_94/S2_3_2/SN (FAx1_ASAP7_75t_R)             39.41     268.45 f
+  U10318/Y (INVx1_ASAP7_75t_R)                           18.41     286.86 r
+  node1/mult_94/S2_4_1/SN (FAx1_ASAP7_75t_R)             39.39     326.25 f
+  U10317/Y (INVx1_ASAP7_75t_R)                           18.49     344.74 r
+  node1/mult_94/S1_5_0/SN (FAx1_ASAP7_75t_R)             47.79     392.54 f
+  U16208/Y (NOR3xp33_ASAP7_75t_R)                        43.17     435.71 r
+  U17518/Y (O2A1O1Ixp33_ASAP7_75t_R)                     32.84     468.55 f
+  node1/add_2_root_add_109_3/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         28.85     497.40 r
+  U10244/Y (INVx1_ASAP7_75t_R)                           17.95     515.35 f
+  node1/add_2_root_add_109_3/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.15     537.50 r
+  U10238/Y (INVx1_ASAP7_75t_R)                           17.47     554.97 f
+  node1/add_2_root_add_109_3/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     576.96 r
+  U10232/Y (INVx1_ASAP7_75t_R)                           17.42     594.38 f
+  node1/add_2_root_add_109_3/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     616.36 r
+  U10226/Y (INVx1_ASAP7_75t_R)                           17.41     633.76 f
+  node1/add_2_root_add_109_3/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     655.74 r
+  U10220/Y (INVx1_ASAP7_75t_R)                           17.54     673.28 f
+  node1/add_2_root_add_109_3/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     695.29 r
+  U10214/Y (INVx1_ASAP7_75t_R)                           17.42     712.71 f
+  node1/add_2_root_add_109_3/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     734.69 r
+  U10208/Y (INVx1_ASAP7_75t_R)                           17.63     752.32 f
+  node1/add_2_root_add_109_3/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     774.36 r
+  U10202/Y (INVx1_ASAP7_75t_R)                           17.36     791.73 f
+  node1/add_2_root_add_109_3/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     813.69 r
+  U10196/Y (INVx1_ASAP7_75t_R)                           17.23     830.92 f
+  node1/add_2_root_add_109_3/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     852.83 r
+  U10190/Y (INVx1_ASAP7_75t_R)                           17.24     870.07 f
+  node1/add_2_root_add_109_3/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.92     891.99 r
+  U10184/Y (INVx1_ASAP7_75t_R)                           18.16     910.15 f
+  node1/add_2_root_add_109_3/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.23     932.37 r
+  U10178/Y (INVx1_ASAP7_75t_R)                           17.22     949.60 f
+  node1/add_2_root_add_109_3/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58     986.18 r
+  U10177/Y (INVx1_ASAP7_75t_R)                           32.62    1018.80 f
+  node1/add_0_root_add_109_3/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1047.50 r
+  U10173/Y (INVx1_ASAP7_75t_R)                           17.41    1064.91 f
+  node1/add_0_root_add_109_3/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1086.88 r
+  U10169/Y (INVx1_ASAP7_75t_R)                           17.41    1104.30 f
+  node1/add_0_root_add_109_3/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1143.01 f
+  U10168/Y (INVx1_ASAP7_75t_R)                           43.61    1186.62 r
+  r221/U1_19/SN (FAx1_ASAP7_75t_R)                       53.55    1240.17 f
+  U10167/Y (INVx1_ASAP7_75t_R)                           30.12    1270.28 r
+  add_0_root_add_79_2/U1_19/CON (FAx1_ASAP7_75t_R)       25.64    1295.93 f
+  U9988/Y (INVx1_ASAP7_75t_R)                            19.67    1315.59 r
+  add_0_root_add_79_2/U1_20/SN (FAx1_ASAP7_75t_R)        36.46    1352.05 r
+  out0_node0_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1352.05 r
+  data arrival time                                               1352.05
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out0_node0_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -12.25    1387.74
+  data required time                                              1387.74
+  --------------------------------------------------------------------------
+  data required time                                              1387.74
+  data arrival time                                              -1352.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                       35.69
+
+
+  Startpoint: node1/s_o1_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out0_node1_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node1/s_o1_reg[0][0]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node1/s_o1_reg[0][0]/QN (DFFHQNx1_ASAP7_75t_R)         71.14      71.14 f
+  U13552/Y (INVx1_ASAP7_75t_R)                           27.22      98.36 r
+  U3928/Y (NAND2xp5_ASAP7_75t_R)                         21.71     120.06 f
+  U20073/Y (NOR3xp33_ASAP7_75t_R)                        38.00     158.06 r
+  node1/mult_94/S3_2_3/SN (FAx1_ASAP7_75t_R)             52.52     210.58 f
+  U10319/Y (INVx1_ASAP7_75t_R)                           18.46     229.04 r
+  node1/mult_94/S2_3_2/SN (FAx1_ASAP7_75t_R)             39.41     268.45 f
+  U10318/Y (INVx1_ASAP7_75t_R)                           18.41     286.86 r
+  node1/mult_94/S2_4_1/SN (FAx1_ASAP7_75t_R)             39.39     326.25 f
+  U10317/Y (INVx1_ASAP7_75t_R)                           18.49     344.74 r
+  node1/mult_94/S1_5_0/SN (FAx1_ASAP7_75t_R)             47.79     392.54 f
+  U16208/Y (NOR3xp33_ASAP7_75t_R)                        43.17     435.71 r
+  U17518/Y (O2A1O1Ixp33_ASAP7_75t_R)                     32.84     468.55 f
+  node1/add_2_root_add_109_3/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         28.85     497.40 r
+  U10244/Y (INVx1_ASAP7_75t_R)                           17.95     515.35 f
+  node1/add_2_root_add_109_3/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.15     537.50 r
+  U10238/Y (INVx1_ASAP7_75t_R)                           17.47     554.97 f
+  node1/add_2_root_add_109_3/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     576.96 r
+  U10232/Y (INVx1_ASAP7_75t_R)                           17.42     594.38 f
+  node1/add_2_root_add_109_3/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     616.36 r
+  U10226/Y (INVx1_ASAP7_75t_R)                           17.41     633.76 f
+  node1/add_2_root_add_109_3/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     655.74 r
+  U10220/Y (INVx1_ASAP7_75t_R)                           17.54     673.28 f
+  node1/add_2_root_add_109_3/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     695.29 r
+  U10214/Y (INVx1_ASAP7_75t_R)                           17.42     712.71 f
+  node1/add_2_root_add_109_3/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     734.69 r
+  U10208/Y (INVx1_ASAP7_75t_R)                           17.63     752.32 f
+  node1/add_2_root_add_109_3/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     774.36 r
+  U10202/Y (INVx1_ASAP7_75t_R)                           17.36     791.73 f
+  node1/add_2_root_add_109_3/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     813.69 r
+  U10196/Y (INVx1_ASAP7_75t_R)                           17.23     830.92 f
+  node1/add_2_root_add_109_3/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     852.83 r
+  U10190/Y (INVx1_ASAP7_75t_R)                           17.24     870.07 f
+  node1/add_2_root_add_109_3/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.92     891.99 r
+  U10184/Y (INVx1_ASAP7_75t_R)                           18.16     910.15 f
+  node1/add_2_root_add_109_3/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.23     932.37 r
+  U10178/Y (INVx1_ASAP7_75t_R)                           17.22     949.60 f
+  node1/add_2_root_add_109_3/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58     986.18 r
+  U10177/Y (INVx1_ASAP7_75t_R)                           32.62    1018.80 f
+  node1/add_0_root_add_109_3/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1047.50 r
+  U10173/Y (INVx1_ASAP7_75t_R)                           17.41    1064.91 f
+  node1/add_0_root_add_109_3/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1086.88 r
+  U10169/Y (INVx1_ASAP7_75t_R)                           17.41    1104.30 f
+  node1/add_0_root_add_109_3/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1143.01 f
+  U10168/Y (INVx1_ASAP7_75t_R)                           43.61    1186.62 r
+  r221/U1_19/SN (FAx1_ASAP7_75t_R)                       53.55    1240.17 f
+  U10167/Y (INVx1_ASAP7_75t_R)                           30.12    1270.28 r
+  add_0_root_add_84_2/U1_19/CON (FAx1_ASAP7_75t_R)       25.64    1295.93 f
+  U9780/Y (INVx1_ASAP7_75t_R)                            19.67    1315.59 r
+  add_0_root_add_84_2/U1_20/SN (FAx1_ASAP7_75t_R)        36.46    1352.05 r
+  out0_node1_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1352.05 r
+  data arrival time                                               1352.05
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out0_node1_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -12.25    1387.74
+  data required time                                              1387.74
+  --------------------------------------------------------------------------
+  data required time                                              1387.74
+  data arrival time                                              -1352.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                       35.69
+
+
+  Startpoint: node1/s_o1_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out1_node0_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node1/s_o1_reg[0][0]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node1/s_o1_reg[0][0]/QN (DFFHQNx1_ASAP7_75t_R)         71.14      71.14 f
+  U13552/Y (INVx1_ASAP7_75t_R)                           27.22      98.36 r
+  U3806/Y (NAND2xp5_ASAP7_75t_R)                         21.71     120.06 f
+  U20070/Y (NOR3xp33_ASAP7_75t_R)                        38.00     158.06 r
+  node1/mult_94_G2_G1/S3_2_3/SN (FAx1_ASAP7_75t_R)       52.48     210.54 f
+  U12164/Y (INVx1_ASAP7_75t_R)                           18.46     229.00 r
+  node1/mult_94_G2_G1/S2_3_2/SN (FAx1_ASAP7_75t_R)       39.41     268.40 f
+  U12163/Y (INVx1_ASAP7_75t_R)                           18.41     286.82 r
+  node1/mult_94_G2_G1/S2_4_1/SN (FAx1_ASAP7_75t_R)       39.39     326.21 f
+  U12162/Y (INVx1_ASAP7_75t_R)                           18.49     344.70 r
+  node1/mult_94_G2_G1/S1_5_0/SN (FAx1_ASAP7_75t_R)       47.79     392.49 f
+  U16207/Y (NOR3xp33_ASAP7_75t_R)                        43.17     435.66 r
+  U17516/Y (O2A1O1Ixp33_ASAP7_75t_R)                     32.84     468.50 f
+  node1/add_2_root_add_109_3_G2/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         28.85     497.36 r
+  U12089/Y (INVx1_ASAP7_75t_R)                           17.83     515.19 f
+  node1/add_2_root_add_109_3_G2/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.11     537.30 r
+  U12083/Y (INVx1_ASAP7_75t_R)                           17.47     554.77 f
+  node1/add_2_root_add_109_3_G2/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     576.76 r
+  U12077/Y (INVx1_ASAP7_75t_R)                           17.42     594.17 f
+  node1/add_2_root_add_109_3_G2/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     616.15 r
+  U12071/Y (INVx1_ASAP7_75t_R)                           17.41     633.56 f
+  node1/add_2_root_add_109_3_G2/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     655.53 r
+  U12065/Y (INVx1_ASAP7_75t_R)                           17.54     673.07 f
+  node1/add_2_root_add_109_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     695.09 r
+  U12059/Y (INVx1_ASAP7_75t_R)                           17.42     712.51 f
+  node1/add_2_root_add_109_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     734.48 r
+  U12053/Y (INVx1_ASAP7_75t_R)                           17.63     752.11 f
+  node1/add_2_root_add_109_3_G2/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     774.16 r
+  U12047/Y (INVx1_ASAP7_75t_R)                           17.36     791.52 f
+  node1/add_2_root_add_109_3_G2/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     813.48 r
+  U12041/Y (INVx1_ASAP7_75t_R)                           17.23     830.71 f
+  node1/add_2_root_add_109_3_G2/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     852.63 r
+  U12035/Y (INVx1_ASAP7_75t_R)                           17.24     869.87 f
+  node1/add_2_root_add_109_3_G2/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.92     891.78 r
+  U12029/Y (INVx1_ASAP7_75t_R)                           18.16     909.94 f
+  node1/add_2_root_add_109_3_G2/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.23     932.17 r
+  U12023/Y (INVx1_ASAP7_75t_R)                           17.22     949.39 f
+  node1/add_2_root_add_109_3_G2/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58     985.97 r
+  U12022/Y (INVx1_ASAP7_75t_R)                           32.62    1018.59 f
+  node1/add_0_root_add_109_3_G2/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1047.29 r
+  U12018/Y (INVx1_ASAP7_75t_R)                           17.41    1064.70 f
+  node1/add_0_root_add_109_3_G2/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1086.68 r
+  U12014/Y (INVx1_ASAP7_75t_R)                           17.41    1104.09 f
+  node1/add_0_root_add_109_3_G2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1142.80 f
+  U12013/Y (INVx1_ASAP7_75t_R)                           43.61    1186.41 r
+  r223/U1_19/SN (FAx1_ASAP7_75t_R)                       53.55    1239.96 f
+  U12012/Y (INVx1_ASAP7_75t_R)                           30.12    1270.08 r
+  add_0_root_add_80_2/U1_19/CON (FAx1_ASAP7_75t_R)       25.64    1295.72 f
+  U11834/Y (INVx1_ASAP7_75t_R)                           19.67    1315.39 r
+  add_0_root_add_80_2/U1_20/SN (FAx1_ASAP7_75t_R)        36.46    1351.84 r
+  out1_node0_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1351.84 r
+  data arrival time                                               1351.84
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out1_node0_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -12.25    1387.74
+  data required time                                              1387.74
+  --------------------------------------------------------------------------
+  data required time                                              1387.74
+  data arrival time                                              -1351.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                       35.90
+
+
+  Startpoint: node1/s_o1_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out1_node1_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node1/s_o1_reg[0][0]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node1/s_o1_reg[0][0]/QN (DFFHQNx1_ASAP7_75t_R)         71.14      71.14 f
+  U13552/Y (INVx1_ASAP7_75t_R)                           27.22      98.36 r
+  U3806/Y (NAND2xp5_ASAP7_75t_R)                         21.71     120.06 f
+  U20070/Y (NOR3xp33_ASAP7_75t_R)                        38.00     158.06 r
+  node1/mult_94_G2_G1/S3_2_3/SN (FAx1_ASAP7_75t_R)       52.48     210.54 f
+  U12164/Y (INVx1_ASAP7_75t_R)                           18.46     229.00 r
+  node1/mult_94_G2_G1/S2_3_2/SN (FAx1_ASAP7_75t_R)       39.41     268.40 f
+  U12163/Y (INVx1_ASAP7_75t_R)                           18.41     286.82 r
+  node1/mult_94_G2_G1/S2_4_1/SN (FAx1_ASAP7_75t_R)       39.39     326.21 f
+  U12162/Y (INVx1_ASAP7_75t_R)                           18.49     344.70 r
+  node1/mult_94_G2_G1/S1_5_0/SN (FAx1_ASAP7_75t_R)       47.79     392.49 f
+  U16207/Y (NOR3xp33_ASAP7_75t_R)                        43.17     435.66 r
+  U17516/Y (O2A1O1Ixp33_ASAP7_75t_R)                     32.84     468.50 f
+  node1/add_2_root_add_109_3_G2/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         28.85     497.36 r
+  U12089/Y (INVx1_ASAP7_75t_R)                           17.83     515.19 f
+  node1/add_2_root_add_109_3_G2/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.11     537.30 r
+  U12083/Y (INVx1_ASAP7_75t_R)                           17.47     554.77 f
+  node1/add_2_root_add_109_3_G2/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     576.76 r
+  U12077/Y (INVx1_ASAP7_75t_R)                           17.42     594.17 f
+  node1/add_2_root_add_109_3_G2/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     616.15 r
+  U12071/Y (INVx1_ASAP7_75t_R)                           17.41     633.56 f
+  node1/add_2_root_add_109_3_G2/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     655.53 r
+  U12065/Y (INVx1_ASAP7_75t_R)                           17.54     673.07 f
+  node1/add_2_root_add_109_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     695.09 r
+  U12059/Y (INVx1_ASAP7_75t_R)                           17.42     712.51 f
+  node1/add_2_root_add_109_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     734.48 r
+  U12053/Y (INVx1_ASAP7_75t_R)                           17.63     752.11 f
+  node1/add_2_root_add_109_3_G2/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     774.16 r
+  U12047/Y (INVx1_ASAP7_75t_R)                           17.36     791.52 f
+  node1/add_2_root_add_109_3_G2/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     813.48 r
+  U12041/Y (INVx1_ASAP7_75t_R)                           17.23     830.71 f
+  node1/add_2_root_add_109_3_G2/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     852.63 r
+  U12035/Y (INVx1_ASAP7_75t_R)                           17.24     869.87 f
+  node1/add_2_root_add_109_3_G2/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.92     891.78 r
+  U12029/Y (INVx1_ASAP7_75t_R)                           18.16     909.94 f
+  node1/add_2_root_add_109_3_G2/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.23     932.17 r
+  U12023/Y (INVx1_ASAP7_75t_R)                           17.22     949.39 f
+  node1/add_2_root_add_109_3_G2/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58     985.97 r
+  U12022/Y (INVx1_ASAP7_75t_R)                           32.62    1018.59 f
+  node1/add_0_root_add_109_3_G2/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1047.29 r
+  U12018/Y (INVx1_ASAP7_75t_R)                           17.41    1064.70 f
+  node1/add_0_root_add_109_3_G2/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1086.68 r
+  U12014/Y (INVx1_ASAP7_75t_R)                           17.41    1104.09 f
+  node1/add_0_root_add_109_3_G2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1142.80 f
+  U12013/Y (INVx1_ASAP7_75t_R)                           43.61    1186.41 r
+  r223/U1_19/SN (FAx1_ASAP7_75t_R)                       53.55    1239.96 f
+  U12012/Y (INVx1_ASAP7_75t_R)                           30.12    1270.08 r
+  add_0_root_add_85_2/U1_19/CON (FAx1_ASAP7_75t_R)       25.64    1295.72 f
+  U11626/Y (INVx1_ASAP7_75t_R)                           19.67    1315.39 r
+  add_0_root_add_85_2/U1_20/SN (FAx1_ASAP7_75t_R)        36.46    1351.84 r
+  out1_node1_reg[20]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1351.84 r
+  data arrival time                                               1351.84
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out1_node1_reg[20]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -12.25    1387.74
+  data required time                                              1387.74
+  --------------------------------------------------------------------------
+  data required time                                              1387.74
+  data arrival time                                              -1351.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                       35.90
+
+
+  Startpoint: node3/s_o1_reg[1][1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out0_node3_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  node3/s_o1_reg[1][1]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00       0.00 r
+  node3/s_o1_reg[1][1]/QN (DFFHQNx1_ASAP7_75t_R)         79.71      79.71 r
+  U13636/Y (INVx1_ASAP7_75t_R)                           32.36     112.07 f
+  U20100/Y (NOR4xp25_ASAP7_75t_R)                        52.91     164.98 r
+  node3/mult_94_G2/S3_2_3/SN (FAx1_ASAP7_75t_R)          57.85     222.83 f
+  U10841/Y (INVx1_ASAP7_75t_R)                           19.20     242.03 r
+  node3/mult_94_G2/S2_3_2/SN (FAx1_ASAP7_75t_R)          39.65     281.68 f
+  U10608/Y (INVx1_ASAP7_75t_R)                           18.64     300.33 r
+  node3/mult_94_G2/S2_4_1/SN (FAx1_ASAP7_75t_R)          39.47     339.80 f
+  U10607/Y (INVx1_ASAP7_75t_R)                           18.51     358.30 r
+  node3/mult_94_G2/S1_5_0/SN (FAx1_ASAP7_75t_R)          47.80     406.10 f
+  U16197/Y (NOR3xp33_ASAP7_75t_R)                        43.19     449.29 r
+  U17134/Y (O2A1O1Ixp33_ASAP7_75t_R)                     34.18     483.47 f
+  node3/add_2_root_add_109_3/U1_5/CON (FAx1_ASAP7_75t_R)
+                                                         32.13     515.60 r
+  U9901/Y (INVx1_ASAP7_75t_R)                            17.95     533.55 f
+  node3/add_2_root_add_109_3/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.15     555.70 r
+  U9892/Y (INVx1_ASAP7_75t_R)                            17.47     573.17 f
+  node3/add_2_root_add_109_3/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     595.16 r
+  U9883/Y (INVx1_ASAP7_75t_R)                            17.42     612.58 f
+  node3/add_2_root_add_109_3/U1_8/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     634.56 r
+  U9874/Y (INVx1_ASAP7_75t_R)                            17.41     651.96 f
+  node3/add_2_root_add_109_3/U1_9/CON (FAx1_ASAP7_75t_R)
+                                                         21.97     673.94 r
+  U9865/Y (INVx1_ASAP7_75t_R)                            17.54     691.48 f
+  node3/add_2_root_add_109_3/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         22.02     713.50 r
+  U9856/Y (INVx1_ASAP7_75t_R)                            17.42     730.92 f
+  node3/add_2_root_add_109_3/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         21.98     752.90 r
+  U9847/Y (INVx1_ASAP7_75t_R)                            17.64     770.54 f
+  node3/add_2_root_add_109_3/U1_12/CON (FAx1_ASAP7_75t_R)
+                                                         22.05     792.58 r
+  U9838/Y (INVx1_ASAP7_75t_R)                            17.37     809.95 f
+  node3/add_2_root_add_109_3/U1_13/CON (FAx1_ASAP7_75t_R)
+                                                         21.96     831.91 r
+  U9829/Y (INVx1_ASAP7_75t_R)                            17.23     849.14 f
+  node3/add_2_root_add_109_3/U1_14/CON (FAx1_ASAP7_75t_R)
+                                                         21.91     871.05 r
+  U9820/Y (INVx1_ASAP7_75t_R)                            17.46     888.51 f
+  node3/add_2_root_add_109_3/U1_15/CON (FAx1_ASAP7_75t_R)
+                                                         21.99     910.50 r
+  U9811/Y (INVx1_ASAP7_75t_R)                            17.67     928.18 f
+  node3/add_2_root_add_109_3/U1_16/CON (FAx1_ASAP7_75t_R)
+                                                         22.06     950.24 r
+  U9802/Y (INVx1_ASAP7_75t_R)                            17.23     967.46 f
+  node3/add_2_root_add_109_3/U1_17/SN (FAx1_ASAP7_75t_R)
+                                                         36.58    1004.04 r
+  U9801/Y (INVx1_ASAP7_75t_R)                            32.62    1036.66 f
+  node3/add_0_root_add_109_3/U1_17/CON (FAx1_ASAP7_75t_R)
+                                                         28.70    1065.36 r
+  U9794/Y (INVx1_ASAP7_75t_R)                            17.41    1082.77 f
+  node3/add_0_root_add_109_3/U1_18/CON (FAx1_ASAP7_75t_R)
+                                                         21.97    1104.75 r
+  U9787/Y (INVx1_ASAP7_75t_R)                            17.41    1122.16 f
+  node3/add_0_root_add_109_3/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         38.71    1160.87 f
+  U9786/Y (INVx1_ASAP7_75t_R)                            57.90    1218.77 r
+  add_1_root_add_0_root_add_94_2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         59.93    1278.70 f
+  U9784/Y (INVx1_ASAP7_75t_R)                            22.88    1301.58 r
+  add_0_root_add_0_root_add_94_2/U1_19/CON (FAx1_ASAP7_75t_R)
+                                                         21.79    1323.37 f
+  add_0_root_add_0_root_add_94_2/U1_19/SN (FAx1_ASAP7_75t_R)
+                                                         18.18    1341.55 r
+  out0_node3_reg[19]/D (DFFHQNx1_ASAP7_75t_R)             0.00    1341.55 r
+  data arrival time                                               1341.55
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  out0_node3_reg[19]/CLK (DFFHQNx1_ASAP7_75t_R)           0.00    1399.99 r
+  library setup time                                    -11.70    1388.29
+  data required time                                              1388.29
+  --------------------------------------------------------------------------
+  data required time                                              1388.29
+  data arrival time                                              -1341.55
+  --------------------------------------------------------------------------
+  slack (MET)                                                       46.74
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15825/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][2]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][2]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15823/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][3]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][3]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15822/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][4]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][4]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15821/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][5]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][5]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15820/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][6]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][6]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15819/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][7]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][7]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15818/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][8]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][8]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15817/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][9]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][9]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15816/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][10]/D (DFFHQNx1_ASAP7_75t_R)          0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][10]/CLK (DFFHQNx1_ASAP7_75t_R)        0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15815/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][11]/D (DFFHQNx1_ASAP7_75t_R)          0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][11]/CLK (DFFHQNx1_ASAP7_75t_R)        0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+  Startpoint: x3_node0[0]
+              (input port clocked by clk)
+  Endpoint: node0/s_o1_reg[1][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  x3_node0[0] (in)                                        0.00       0.10 f
+  U20107/Y (INVx1_ASAP7_75t_R)                           12.86      12.96 r
+  U20104/Y (NOR2xp33_ASAP7_75t_R)                        27.18      40.15 f
+  r199/U1_1/CON (FAx1_ASAP7_75t_R)                       27.63      67.78 r
+  r199/U1_1/SN (FAx1_ASAP7_75t_R)                        17.31      85.09 f
+  U8787/Y (INVx1_ASAP7_75t_R)                            28.86     113.94 r
+  add_0_root_add_53_2_G4/U1_1/SN (FAx1_ASAP7_75t_R)     185.94     299.88 f
+  U20995/Y (INVx1_ASAP7_75t_R)                           95.02     394.90 r
+  U17723/Y (NOR2xp33_ASAP7_75t_R)                        50.43     445.33 f
+  node0/mult_54_G2_G4/S3_2_3/CON (FAx1_ASAP7_75t_R)      35.27     480.60 r
+  U8769/Y (INVx1_ASAP7_75t_R)                            21.88     502.48 f
+  node0/mult_54_G2_G4/S3_3_3/CON (FAx1_ASAP7_75t_R)      25.72     528.20 r
+  node0/mult_54_G2_G4/S3_3_3/SN (FAx1_ASAP7_75t_R)       18.09     546.29 f
+  U8664/Y (INVx1_ASAP7_75t_R)                            18.99     565.28 r
+  node0/mult_54_G2_G4/S2_4_2/CON (FAx1_ASAP7_75t_R)      16.68     581.96 f
+  U21076/Y (INVxp33_ASAP7_75t_R)                         36.50     618.46 r
+  node0/mult_54_G2_G4/S2_5_2/SN (FAx1_ASAP7_75t_R)       49.96     668.42 f
+  U8499/Y (INVx1_ASAP7_75t_R)                            19.01     687.42 r
+  node0/mult_54_G2_G4/S4_1/CON (FAx1_ASAP7_75t_R)        24.16     711.58 f
+  node0/mult_54_G2_G4/S4_1/SN (FAx1_ASAP7_75t_R)         21.21     732.80 r
+  U8471/Y (INVx1_ASAP7_75t_R)                            21.02     753.82 f
+  U15614/Y (XNOR2xp5_ASAP7_75t_R)                        26.60     780.42 f
+  U16174/Y (NOR2xp33_ASAP7_75t_R)                        25.15     805.57 r
+  U15612/Y (OA21x2_ASAP7_75t_R)                          31.84     837.40 r
+  U16018/Y (OAI21xp5_ASAP7_75t_R)                        16.40     853.80 f
+  U17012/Y (AOI221xp5_ASAP7_75t_R)                       35.19     888.98 r
+  U15608/SN (FAx1_ASAP7_75t_R)                          150.56    1039.55 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         46.47    1086.02 r
+  U7832/Y (INVx1_ASAP7_75t_R)                            20.63    1106.65 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         23.22    1129.87 r
+  U7830/Y (INVx1_ASAP7_75t_R)                            20.63    1150.50 f
+  node0/add_1_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         39.95    1190.45 f
+  U7829/Y (INVx1_ASAP7_75t_R)                            24.71    1215.16 r
+  node0/add_0_root_add_0_root_add_68_3_G2/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         47.84    1263.00 f
+  U21007/Y (INVxp67_ASAP7_75t_R)                         48.78    1311.78 r
+  U15826/Y (OR2x2_ASAP7_75t_R)                           33.70    1345.48 r
+  node0/s_o1_reg[1][1]/D (DFFHQNx1_ASAP7_75t_R)           0.00    1345.48 r
+  data arrival time                                               1345.48
+
+  clock clk (rise edge)                                1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                      -0.01    1399.99
+  node0/s_o1_reg[1][1]/CLK (DFFHQNx1_ASAP7_75t_R)         0.00    1399.99 r
+  library setup time                                     -6.34    1393.65
+  data required time                                              1393.65
+  --------------------------------------------------------------------------
+  data required time                                              1393.65
+  data arrival time                                              -1345.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.17
+
+
+1

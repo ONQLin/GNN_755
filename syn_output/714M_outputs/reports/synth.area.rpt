@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : area
+Design : top
+Version: T-2022.03-SP3
+Date   : Wed Mar 22 17:42:44 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    asap7sc7p5t_INVBUF_RVT_TT_nldm_211120 (File: /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120 (File: /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_AO_RVT_TT_nldm_211120 (File: /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_OA_RVT_TT_nldm_211120 (File: /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_OA_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_SEQ_RVT_TT_nldm_220123 (File: /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.db)
+
+Number of ports:                          378
+Number of nets:                         24516
+Number of cells:                        20440
+Number of combinational cells:          20060
+Number of sequential cells:               380
+Number of macros/black boxes:               0
+Number of buf/inv:                       7750
+Number of references:                      27
+
+Combinational area:               1819.321543
+Buf/Inv area:                      342.250925
+Noncombinational area:             110.807996
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1930.129538
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+top                               1930.1295    100.0  1819.3215   110.8080  0.0000  top
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+Total                                                 1819.3215   110.8080  0.0000
+
+1
