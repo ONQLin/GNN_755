@@ -16,6 +16,8 @@ The computation of GNN may requrie further verification.
 
 
 ## Milestone 3: DC Syn
+Done, it is regular work according to the guide without coding with extra files. Please follow the Readme in ms3 if you want to play. I have established the impl of different performance configuration(3 stages and 6 stages in DNN). You can check that in syn_output, and I prefer the 3 stages one. They all pass the post-syn test by MS2. You can play with that and writing different constraints(clk) and check the synthesis report. Perhaps I will update 1 stage DNN to see the slower version's results.
+
 There is now 3 configurations in DNN design: 1 stage; 3 stage; 6 stages
 These three config make difference in both performance (inference throughput = freq and Syn area, power...). I think it can help us better trade off the design and find ways to optimize. BTW, both three configs have passed the tb in MS2.
 
