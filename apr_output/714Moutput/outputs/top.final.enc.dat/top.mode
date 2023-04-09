@@ -31,14 +31,14 @@ catch { setExtractRCMode  -engine postRoute -total_c_th 0 -relative_c_th 1 -coup
 catch {setNanoRouteMode -quiet -drouteStartIteration 0}
 catch {setNanoRouteMode -quiet -drouteUseLefPinTaperRule true}
 catch {setNanoRouteMode -quiet -drouteUseMinSpacingForBlockage auto}
-catch {setNanoRouteMode -quiet -extractDesignSignature 126773026}
+catch {setNanoRouteMode -quiet -extractDesignSignature 131207624}
 catch {setNanoRouteMode -quiet -extractRcModelFile "${::IMEX::libVar}/misc/rc_model.bin"}
 catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
 catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 7.800000}
 catch {setNanoRouteMode -quiet -grouteExpTdUseTifTimingEngineForImportDesign false}
 catch {setNanoRouteMode -quiet -routeStrictlyHonorNonDefaultRule "false"}
 catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
-catch {setNanoRouteMode -quiet -timingEngine ".timing_file_865230.tif.gz"}
+catch {setNanoRouteMode -quiet -timingEngine ".timing_file_2441885.tif.gz"}
 
 catch { setPlaceMode -place_detail_dpt_flow true }
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
