@@ -21,7 +21,7 @@ Done, it is regular work according to the guide without coding with extra files.
 There is now 3 configurations in DNN design: 1 stage; 3 stage; 6 stages
 These three config make difference in both performance (inference throughput = freq and Syn area, power...). I think it can help us better trade off the design and find ways to optimize. BTW, both three configs have passed the tb in MS2.
 
-## Milestone 3: APR
+## Milestone 4: APR
 change the FP_TARGET to fit different Routing requirements in 714/870/1G design. Area's variation seems quite large after that without manually adjustment on layout. Anywany, the APR results are done after simple scripts automatic running.
 
 
