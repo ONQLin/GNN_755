@@ -24,6 +24,8 @@ These three config make difference in both performance (inference throughput = f
 ## Milestone 4: APR
 change the FP_TARGET to fit different Routing requirements in 714/870/1G design. Area's variation seems quite large after that without manually adjustment on layout. Anywany, the APR results are done after simple scripts automatic running.
 
+## Milestone 5: Post-APR layout
+Just to generate physical layout on Virtuoso. Just follow the Readme and go through it. However, I met with a undefined package problem which I dont know appropriate or not.
 
 ### File Org:
 each Milestone's tb and other materials will store at its own folder. ./testbench folder store some DIY files.
