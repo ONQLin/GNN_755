@@ -27,5 +27,8 @@ change the FP_TARGET to fit different Routing requirements in 714/870/1G design.
 ## Milestone 5: Post-APR layout
 Just to generate physical layout on Virtuoso. Just follow the Readme and go through it. However, I met with a undefined package problem which I dont know appropriate or not.
 
+## Milestone 5: Post-APR layout
+Go through readme. 870M design is now updated to 970M with PT reports. Further analysis reports can be done with reports' metrics. New optimization idea remains coming out. You can refer to the readme and figure out the 714 and 1G design with finding the maximum clk frequency.
+
 ### File Org:
 each Milestone's tb and other materials will store at its own folder. ./testbench folder store some DIY files.
