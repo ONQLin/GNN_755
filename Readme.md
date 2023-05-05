@@ -30,5 +30,7 @@ Just to generate physical layout on Virtuoso. Just follow the Readme and go thro
 ## Milestone 6: Post-APR layout
 Go through readme. 870M design is now updated to 970M with PT reports. Further analysis reports can be done with reports' metrics. New optimization idea remains coming out. You can refer to the readme and figure out the 714 and 1G design with finding the maximum clk frequency.
 
+Some optimization is done and the draft of final reports follows these results
+
 ### File Org:
 each Milestone's tb and other materials will store at its own folder. ./testbench folder store some DIY files.
