@@ -6,7 +6,7 @@
 // hand-shaking signals: synchronous with registers
 
 module dnn_top#(
-    parameter performance = 2,          // performance 1: 3 stages performance 2: 6 stages
+    parameter performance = 0,          // performance 1: 3 stages performance 2: 6 stages
     parameter i_w = 7                   // input x width
 )
 (

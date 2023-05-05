@@ -1,0 +1,10 @@
+Running PRESTO HDLC
+Compiling source file /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/gnn_top.sv
+Compiling source file /filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/dnn_top.sv
+Presto compilation completed successfully.
+Loading db file '/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_OA_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/j/jlin445/ece755/GNN_755/MS_3_Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.db'
+1

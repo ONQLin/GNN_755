@@ -1,0 +1,96 @@
+ 
+****************************************
+Report : qor
+Design : top
+Version: T-2022.03-SP3
+Date   : Fri May  5 02:41:00 2023
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:               2.00
+  Critical Path Length:         84.45
+  Critical Path Slack:        1305.91
+  Critical Path Clk Period:   1400.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'clk_gated'
+  -----------------------------------
+  Levels of Logic:              50.00
+  Critical Path Length:       1374.00
+  Critical Path Slack:          25.89
+  Critical Path Clk Period:   1400.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:              20437
+  Buf/Inv Cell Count:            7915
+  Buf Cell Count:                 225
+  Inv Cell Count:                7690
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     20231
+  Sequential Cell Count:          206
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     1827.457183
+  Noncombinational Area:    60.069598
+  Buf/Inv Area:            349.482605
+  Total Buffer Area:            13.12
+  Total Inverter Area:         336.36
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:              1887.526780
+  Design Area:            1887.526780
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         24513
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: tux-143
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.02
+  Logic Optimization:                 14.91
+  Mapping Optimization:                6.04
+  -----------------------------------------
+  Overall Compile Time:               23.66
+  Overall Compile Wall Clock Time:    11.51
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

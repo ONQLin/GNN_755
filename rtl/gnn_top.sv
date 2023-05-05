@@ -39,6 +39,7 @@ output logic out10_ready_node1, out11_ready_node1;
 output logic out10_ready_node2, out11_ready_node2;
 output logic out10_ready_node3, out11_ready_node3;
 //Implementation of GNN
+localparam optimize_param = 0;
 
 // xnode[0][1] represents node0 input x1
 wire signed[4:0] xnode[0:3][0:3] = '{'{x0_node0, x1_node0, x2_node0, x3_node0},'{x0_node1, x1_node1, x2_node1, x3_node1},
@@ -75,51 +76,83 @@ endgenerate
 wire signed[19:0] out[0:3][0:1];     //raw out out[0][1] refers to node0 out1
 
 // aggregation of outputs
-always_ff@(posedge clk) begin
-      out0_node0 <= out[0][0] + out[1][0] + out[2][0];
-      out1_node0 <= out[0][1] + out[1][1] + out[2][1];
-end
+// always_ff@(posedge clk) begin
+//       out0_node0 <= out[0][0] + out[1][0] + out[2][0];
+//       out1_node0 <= out[0][1] + out[1][1] + out[2][1];
+// end
 
-always_ff @(posedge clk) begin
-      out0_node1 <= out[1][0] + out[0][0] + out[3][0];
-      out1_node1 <= out[1][1] + out[0][1] + out[3][1];
-end
+// always_ff @(posedge clk) begin
+//       out0_node1 <= out[1][0] + out[0][0] + out[3][0];
+//       out1_node1 <= out[1][1] + out[0][1] + out[3][1];
+// end
 
-always_ff @(posedge clk) begin
-      out0_node2 <= out[2][0] + out[0][0] + out[3][0];
-      out1_node2 <= out[2][1] + out[0][1] + out[3][1];
-end
+// always_ff @(posedge clk) begin
+//       out0_node2 <= out[2][0] + out[0][0] + out[3][0];
+//       out1_node2 <= out[2][1] + out[0][1] + out[3][1];
+// end
 
-always_ff @(posedge clk) begin
-      out0_node3 <= out[3][0] + out[1][0] + out[2][0];
-      out1_node3 <= out[3][1] + out[1][1] + out[2][1]; 
-end
+// always_ff @(posedge clk) begin
+//       out0_node3 <= out[3][0] + out[1][0] + out[2][0];
+//       out1_node3 <= out[3][1] + out[1][1] + out[2][1]; 
+// end
+
+assign out0_node0 = out[0][0] + out[1][0] + out[2][0];
+assign out1_node0 = out[0][1] + out[1][1] + out[2][1];
+assign out0_node1 = out[1][0] + out[0][0] + out[3][0];
+assign out1_node1 = out[1][1] + out[0][1] + out[3][1];
+assign out0_node2 = out[2][0] + out[0][0] + out[3][0];
+assign out1_node2 = out[2][1] + out[0][1] + out[3][1];
+assign out0_node3 = out[3][0] + out[1][0] + out[2][0];
+assign out1_node3 = out[3][1] + out[1][1] + out[2][1];
+
 
 wire out_ready[0:3][0:1];     //raw outready out_ready[0][1] refers to node0 outready1
 
 // aggregation of outputs ready
-always_ff@(posedge clk) begin
-      out10_ready_node0 <= out_ready[0][0] & out_ready[1][0] & out_ready[2][0]; 
-      out11_ready_node0 <= out_ready[0][1] & out_ready[1][1] & out_ready[2][1]; 
+// always_ff@(posedge clk) begin
+//       out10_ready_node0 <= out_ready[0][0] & out_ready[1][0] & out_ready[2][0]; 
+//       out11_ready_node0 <= out_ready[0][1] & out_ready[1][1] & out_ready[2][1]; 
+// end
+
+// always_ff @(posedge clk) begin
+//       out10_ready_node1 <= out_ready[1][0] & out_ready[0][0] & out_ready[3][0]; 
+//       out11_ready_node1 <= out_ready[1][1] & out_ready[0][1] & out_ready[3][1]; 
+// end
+
+// always_ff @(posedge clk) begin
+//       out10_ready_node2 <= out_ready[2][0] & out_ready[0][0] & out_ready[3][0]; 
+//       out11_ready_node2 <= out_ready[2][1] & out_ready[0][1] & out_ready[3][1]; 
+// end
+
+// always_ff @(posedge clk) begin
+//       out10_ready_node3 <= out_ready[3][0] & out_ready[1][0] & out_ready[2][0]; 
+//       out11_ready_node3 <= out_ready[3][1] & out_ready[1][1] & out_ready[2][1]; 
+// end
+
+assign out10_ready_node0 = out_ready[0][0] & out_ready[1][0] & out_ready[2][0];
+assign out11_ready_node0 = out_ready[0][1] & out_ready[1][1] & out_ready[2][1];
+assign out10_ready_node1 = out_ready[1][0] & out_ready[0][0] & out_ready[3][0];
+assign out11_ready_node1 = out_ready[1][1] & out_ready[0][1] & out_ready[3][1];
+assign out10_ready_node2 = out_ready[2][0] & out_ready[0][0] & out_ready[3][0];
+assign out11_ready_node2 = out_ready[2][1] & out_ready[0][1] & out_ready[3][1];
+assign out10_ready_node3 = out_ready[3][0] & out_ready[1][0] & out_ready[2][0];
+assign out11_ready_node3 = out_ready[3][1] & out_ready[1][1] & out_ready[2][1];
+
+logic [1:0]enable_cnt;
+logic gclk;
+always_ff@(negedge clk) begin
+      if(in_ready)
+            enable_cnt <= 2'b11;
+      else
+            enable_cnt <= (enable_cnt!=0) ? enable_cnt - 1'b1 : 0;
 end
 
-always_ff @(posedge clk) begin
-      out10_ready_node1 <= out_ready[1][0] & out_ready[0][0] & out_ready[3][0]; 
-      out11_ready_node1 <= out_ready[1][1] & out_ready[0][1] & out_ready[3][1]; 
-end
-
-always_ff @(posedge clk) begin
-      out10_ready_node2 <= out_ready[2][0] & out_ready[0][0] & out_ready[3][0]; 
-      out11_ready_node2 <= out_ready[2][1] & out_ready[0][1] & out_ready[3][1]; 
-end
-
-always_ff @(posedge clk) begin
-      out10_ready_node3 <= out_ready[3][0] & out_ready[1][0] & out_ready[2][0]; 
-      out11_ready_node3 <= out_ready[3][1] & out_ready[1][1] & out_ready[2][1]; 
-end
+// logic gclk_en2;
+// assign gclk_en2 = (enable_cnt == 2'b00) ? 1'b0 : 1'b1;
+assign gclk = (enable_cnt != 2'b00) ? clk : 1'b0;
 
 // neighbour:1 2
-dnn_top #(.performance(0)) node0 (
+dnn_top #(.performance(optimize_param)) node0 (
       .x0            (x_in[0][0]),
       .x1            (x_in[0][1]),
       .x2            (x_in[0][2]),
@@ -149,7 +182,7 @@ dnn_top #(.performance(0)) node0 (
       .w78           (w78),
       .w79           (w79),
       .in_ready      (in_ready),
-      .clk           (clk),
+      .clk           (gclk),
       .out0          (out[0][0]),
       .out1          (out[0][1]),
       .out0_ready    (out_ready[0][0]),
@@ -157,7 +190,7 @@ dnn_top #(.performance(0)) node0 (
 );
 
 // neighbour:0 3
-dnn_top #(.performance(0)) node1 (
+dnn_top #(.performance(optimize_param)) node1 (
       .x0            (x_in[1][0]),
       .x1            (x_in[1][1]),
       .x2            (x_in[1][2]),
@@ -187,7 +220,7 @@ dnn_top #(.performance(0)) node1 (
       .w78           (w78),
       .w79           (w79),
       .in_ready      (in_ready),
-      .clk           (clk),
+      .clk           (gclk),
       .out0          (out[1][0]),
       .out1          (out[1][1]),
       .out0_ready    (out_ready[1][0]),
@@ -195,7 +228,7 @@ dnn_top #(.performance(0)) node1 (
 );
 
 // neighbour:0 3
-dnn_top #(.performance(0)) node2 (
+dnn_top #(.performance(optimize_param)) node2 (
       .x0            (x_in[2][0]),
       .x1            (x_in[2][1]),
       .x2            (x_in[2][2]),
@@ -225,7 +258,7 @@ dnn_top #(.performance(0)) node2 (
       .w78           (w78),
       .w79           (w79),
       .in_ready      (in_ready),
-      .clk           (clk),
+      .clk           (gclk),
       .out0          (out[2][0]),
       .out1          (out[2][1]),
       .out0_ready    (out_ready[2][0]),
@@ -233,7 +266,7 @@ dnn_top #(.performance(0)) node2 (
 );
 
 // neighbour:1 2
-dnn_top #(.performance(0)) node3 (
+dnn_top #(.performance(optimize_param)) node3 (
       .x0            (x_in[3][0]),
       .x1            (x_in[3][1]),
       .x2            (x_in[3][2]),
@@ -263,7 +296,7 @@ dnn_top #(.performance(0)) node3 (
       .w78           (w78),
       .w79           (w79),
       .in_ready      (in_ready),
-      .clk           (clk),
+      .clk           (gclk),
       .out0          (out[3][0]),
       .out1          (out[3][1]),
       .out0_ready    (out_ready[3][0]),

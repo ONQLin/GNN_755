@@ -1,0 +1,81 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : top
+Version: T-2022.03-SP3
+Date   : Fri May  5 05:01:26 2023
+****************************************
+
+
+  Startpoint: x1_node3[0]
+               (input port clocked by clk_gated)
+  Endpoint: node3/s_o1_reg[0][3]
+               (rising edge-triggered flip-flop clocked by clk_gated)
+  Path Group: clk_gated
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk_gated (rise edge)                             0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  x1_node3[0] (in)                                        0.00 &     0.10 r
+  U9536/Y (INVx1_ASAP7_75t_R)                            15.00 &    15.10 f
+  U20392/Y (NOR2xp33_ASAP7_75t_R)                        27.59 &    42.68 r
+  add_1_root_add_72_2_G2/U1_1/SN (FAx1_ASAP7_75t_R)      48.45 &    91.14 f
+  U9098/Y (INVx1_ASAP7_75t_R)                            21.19 &   112.32 r
+  add_0_root_add_72_2_G2/U1_1/SN (FAx1_ASAP7_75t_R)      41.83 &   154.15 f
+  FE_OFC24_n319/Y (HB1xp67_ASAP7_75t_R)                  80.75 &   234.90 f
+  U21133/Y (INVx1_ASAP7_75t_R)                          103.39 &   338.29 r
+  U18139/Y (NOR2xp33_ASAP7_75t_R)                        62.74 &   401.03 f
+  node3/mult_54_G2/S3_2_3/CON (FAx1_ASAP7_75t_R)         38.67 &   439.70 r
+  U9086/Y (INVx1_ASAP7_75t_R)                            22.91 &   462.61 f
+  node3/mult_54_G2/S3_3_3/CON (FAx1_ASAP7_75t_R)         26.63 &   489.23 r
+  node3/mult_54_G2/S3_3_3/SN (FAx1_ASAP7_75t_R)          20.31 &   509.54 f
+  U9051/Y (INVx1_ASAP7_75t_R)                            22.35 &   531.89 r
+  node3/mult_54_G2/S2_4_2/SN (FAx1_ASAP7_75t_R)          46.51 &   578.40 f
+  U9018/Y (INVx1_ASAP7_75t_R)                            21.11 &   599.50 r
+  node3/mult_54_G2/S2_5_1/SN (FAx1_ASAP7_75t_R)          45.88 &   645.38 f
+  U8988/Y (INVx1_ASAP7_75t_R)                            21.28 &   666.67 r
+  node3/mult_54_G2/S4_0/SN (FAx1_ASAP7_75t_R)            56.07 &   722.73 r
+  U17670/Y (XOR2xp5_ASAP7_75t_R)                         42.21 &   764.94 r
+  U16212/Y (NAND2xp5_ASAP7_75t_R)                        27.37 &   792.32 f
+  U14043/Y (OA21x2_ASAP7_75t_R)                          33.35 &   825.66 f
+  U337/Y (OAI21xp5_ASAP7_75t_R)                          24.36 &   850.03 r
+  U17664/Y (AOI221xp5_ASAP7_75t_R)                       33.29 &   883.31 f
+  U14039/SN (FAx1_ASAP7_75t_R)                          149.00 &  1032.31 f
+  node3/add_2_root_add_68_3/U1_10/CON (FAx1_ASAP7_75t_R)
+                                                         53.82 &  1086.13 r
+  U8691/Y (INVx1_ASAP7_75t_R)                            21.23 &  1107.36 f
+  node3/add_2_root_add_68_3/U1_11/SN (FAx1_ASAP7_75t_R)
+                                                         42.79 &  1150.15 f
+  FE_OFC113_node3_add_2_root_add_68_3_n24/Y (INVx1_ASAP7_75t_R)
+                                                         42.97 &  1193.12 r
+  node3/add_0_root_add_0_root_add_68_3/U1_11/CON (FAx1_ASAP7_75t_R)
+                                                         35.05 &  1228.17 f
+  U8689/Y (INVx1_ASAP7_75t_R)                            18.94 &  1247.11 r
+  node3/add_0_root_add_0_root_add_68_3/U1_12/SN (FAx1_ASAP7_75t_R)
+                                                         46.95 &  1294.06 f
+  U8688/Y (INVx1_ASAP7_75t_R)                            42.15 &  1336.21 r
+  U14116/Y (OR2x2_ASAP7_75t_R)                           32.31 &  1368.52 r
+  node3/s_o1_reg[0][3]/D (DFFHQNx1_ASAP7_75t_R)           0.19 &  1368.71 r
+  data arrival time                                               1368.71
+
+  clock clk_gated (rise edge)                          1380.00    1380.00
+  clock network delay (ideal)                             0.00    1380.00
+  clock reconvergence pessimism                           0.00    1380.00
+  clock uncertainty                                      -0.01    1379.99
+  node3/s_o1_reg[0][3]/CLK (DFFHQNx1_ASAP7_75t_R)                 1379.99 r
+  library setup time                                     -6.80    1373.19
+  data required time                                              1373.19
+  ------------------------------------------------------------------------------
+  data required time                                              1373.19
+  data arrival time                                              -1368.71
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.49
+
+
+1
