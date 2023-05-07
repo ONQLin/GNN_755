@@ -1,7 +1,7 @@
 # Report for the Power/Performance Estimations of GNN
 
 ## 1. Design Overview
-In the RTL design, considering that deeper hidden layers have increased bitwidth, which results in more logic delay for multiplication and sum(), I added flip-flop stages to the DNN with a tendency to relieve the deeper levels' critical paths. This helps in the performance and power comparison among different design options. I implemented an RTL design of DNN with flexible bitwidth and flip-flop stage insertion, as shown in the MS1-MS5 submissions. GNN designs with different frequencies are implemented from the behavioral to the physical layout level. They are then evaluated and compared in this milestone.
+In the RTL design, considering that deeper hidden layers have increased bitwidth, which results in more logic delay for multiplication and sum(), I added flip-flop stages to the DNN with a tendency to relieve the deeper levels' critical paths. Moreover, I implemented an RTL design of DNN with flexible bitwidth and flip-flop stage insertion, as shown in the MS1-MS5 submissions. GNN designs with different frequencies are implemented from the behavioral to the physical layout level. They are then evaluated and compared in this milestone.
 
 &nbsp;
 ## 2. Design Comparison by PT
@@ -14,6 +14,7 @@ From the _reports_730, reports_883, and reports_970_, the PT reports for the 2, 
 | full-stages | 0.00244   | 970                | 7.22           | 6.89     | 49.75      | 0.876           |
 | 4-stages    | 0.0022  | 883                | 4.53           | 5.79     | 26.23      | 0.261            |
 | 2-stages    | 0.00197  | 726                | 2.75           | 3.86     | 10.61      | 0.057            |
+
 &nbsp;
 
 From the table, we can see that the high-frequency design performs poorly in **latency** but performs well in **throughput**, which is not covered in this project's specifications. Additionally, latency is quadratic to EDAP. Moreover, high-frequency design requires more area for flip-flops and routing effort to meet timing closure. Meanwhile, high-frequency mode also indicates larger power. So, considering the EDAP metric, the 2-stage design stands out. **This is important because further optimization is based on these findings from the initial designs and evaluation.**
